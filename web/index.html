@@ -1,1 +1,197 @@
-<h1>Mi web está funcionando</h1>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnovaRetail S.A.C. - Construcción y Mejoramiento</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="bi bi-buildings-fill"></i> InnovaRetail</a>
+            <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <i class="bi bi-list fs-2"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#catalogo">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Atención al Cliente</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="inicio" class="p-0">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://placehold.co/1200x400/0d47a1/FFF?text=Materiales+de+Construcción+Premium"
+                        class="d-block w-100" alt="Materiales">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Construye tus sueños</h5>
+                        <p>Tenemos el mejor cemento y fierros del mercado peruano.</p>
+                        <a href="#catalogo" class="btn btn-warning fw-bold">Ver Ofertas</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://placehold.co/1200x400/ff6f00/FFF?text=Gran+Liquidación+de+Herramientas"
+                        class="d-block w-100" alt="Herramientas">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Equipa tu taller</h5>
+                        <p>Descuentos de hasta 30% en herramientas eléctricas.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://placehold.co/1200x400/333/FFF?text=Acabados+y+Pinturas" class="d-block w-100"
+                        alt="Pinturas">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Dale color a tu vida</h5>
+                        <p>Nuevos catálogos de pinturas lavables y cerámicos.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+
+        <div class="container mt-5">
+            <div class="row text-center">
+                <div class="col-md-4 mb-3">
+                    <div class="p-4 border rounded bg-light">
+                        <i class="bi bi-truck fs-1 text-primary"></i>
+                        <h4 class="mt-2">Despacho a Obra</h4>
+                        <p>Entrega en Lima en 24 horas y envíos a provincia.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="p-4 border rounded bg-light">
+                        <i class="bi bi-shield-check fs-1 text-primary"></i>
+                        <h4 class="mt-2">Garantía Total</h4>
+                        <p>Productos certificados y con garantía de fábrica.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="p-4 border rounded bg-light">
+                        <i class="bi bi-credit-card fs-1 text-primary"></i>
+                        <h4 class="mt-2">Pagos Seguros</h4>
+                        <p>Aceptamos todas las tarjetas y transferencias.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="catalogo" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">Nuestro Catálogo</h2>
+
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="text" id="searchInput" class="form-control form-control-lg"
+                            placeholder="¿Qué estás buscando? (Ej: Cemento)">
+                        <button class="btn btn-primary" type="button" id="searchBtn">
+                            <i class="bi bi-search"></i> Buscar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" id="productGrid">
+            </div>
+
+            <nav aria-label="Navegación de catálogo" class="mt-4">
+                <ul class="pagination justify-content-center" id="paginationControls">
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="section-title">Atención al Cliente</h2>
+                    <p class="text-center text-muted mb-4">¿Tienes dudas sobre un pedido o necesitas una cotización
+                        corporativa? Escríbenos.</p>
+
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <form id="contactForm">
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">Nombre Completo</label>
+                                    <input type="text" class="form-control" id="nombre" required
+                                        placeholder="Juan Pérez">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Correo Electrónico</label>
+                                    <input type="email" class="form-control" id="email" required
+                                        placeholder="juan@ejemplo.com">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="consulta" class="form-label">Tu Consulta</label>
+                                    <textarea class="form-control" id="consulta" rows="4" required
+                                        placeholder="Escribe aquí tu mensaje..."></textarea>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary btn-lg">Enviar Mensaje</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <p class="mb-1">&copy; 2024 InnovaRetail S.A.C. - Todos los derechos reservados.</p>
+            <small class="text-white-50">Lima, Perú</small>
+            <div class="mt-3">
+                <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title"><i class="bi bi-check-circle-fill"></i> ¡Éxito!</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center py-4">
+                    <h4>Mensaje enviado</h4>
+                    <p class="text-muted">Hemos recibido tu consulta. Te responderemos a la brevedad.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
